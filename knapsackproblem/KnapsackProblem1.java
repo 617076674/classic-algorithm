@@ -40,6 +40,17 @@ public class KnapsackProblem1 {
         return dp[n - 1][capacity];
     }
 
+    public static int knapSack01dp2(int[] w, int[] v, int capacity) {
+        int n = w.length;
+        int[] dp = new int[capacity + 1];
+        for (int i = 0; i < n; i++) {
+            for (int j = capacity; j >= w[i]; j--) {
+                dp[j] = Math.max(dp[j], v[i] + dp[j - w[i]]);
+            }
+        }
+        return dp[capacity];
+    }
+
     /**
      * 将[0, index]中的所有物品，装入容量为capacity的背包中，所能得到的最大价值。
      */
@@ -63,6 +74,6 @@ public class KnapsackProblem1 {
 
     public static void main(String[] args) {
         int[] w = {2, 1, 3, 2}, v = {12, 10, 20, 15};
-        System.out.println(knapSack01dp1(w, v, 5));
+        System.out.println(knapSack01dp2(w, v, 5));
     }
 }
