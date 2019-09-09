@@ -1,4 +1,4 @@
-package knapsackproblem;
+package knapsack;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 有一个背包，它的容量为capacity。现在有n种不同的物品，编号为0, ..., (n - 1)，其中每一件物品的重量为w(i)，价值为v(i)。问可以向
  * 这个背包中盛放哪些物品，使得在不超过背包容量的基础上，物品的总价值最大。
  */
-public class KnapsackProblem1 {
+public class Knapsack01 {
     private static int[][] dp;
 
     public static int knapSack01(int[] w, int[] v, int capacity) {
@@ -70,10 +70,5 @@ public class KnapsackProblem1 {
         }
         dp[index][capacity] = result;
         return result;
-    }
-
-    public static void main(String[] args) {
-        int[] w = {2, 1, 3, 2}, v = {12, 10, 20, 15};
-        System.out.println(knapSack01dp2(w, v, 5));
     }
 }
