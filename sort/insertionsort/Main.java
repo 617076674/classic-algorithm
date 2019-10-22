@@ -1,9 +1,12 @@
-package sort;
+package sort.insertionsort;
 
 public class Main {
     public static void main(String[] args) {
         int[] nums = {9, 5, 7, 3, 4, 2, 1};
-        QuickSort.sort(nums);
+        System.out.println("Before sort:");
+        print(nums);
+        InsertionSort.sort(nums);
+        System.out.println("After sort:");
         print(nums);
     }
 
@@ -11,5 +14,6 @@ public class Main {
         for (int i = 0; i < nums.length; i++) {
             System.out.print(nums[i] + " ");
         }
+        System.out.println();
     }
 }

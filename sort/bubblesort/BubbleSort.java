@@ -1,4 +1,4 @@
-package sort;
+package sort.bubblesort;
 
 public class BubbleSort {
     private BubbleSort() {}
@@ -14,7 +14,7 @@ public class BubbleSort {
                 }
             }
             n = k;
-        } while(n > 0);
+        } while (n > 0);
     }
 
     private static void swap(int[] nums, int i, int j) {
