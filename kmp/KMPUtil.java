@@ -5,6 +5,10 @@ public class KMPUtil {
 
     public static int match(String s, String p) {
         int[] next = getNext(p);
+//        for (int i = 0; i < next.length; i++) {
+//            System.out.print(next[i] + " ");
+//        }
+//        System.out.println();
         int j = -1, result = 0;
         for (int i = 0; i < s.length(); i++) {
             while (j != -1 && s.charAt(i) != p.charAt(j + 1)) {
